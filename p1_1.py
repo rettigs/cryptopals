@@ -2,6 +2,8 @@
 
 # http://cryptopals.com/sets/1/challenges/1/
 
+import sys
+
 def _int_to_bits(i,n): 
     '''Given an integer, returns it in binary form with the given number of digits.'''
     return [('0','1')[i>>j & 1] for j in xrange(n-1,-1,-1)]
@@ -29,5 +31,4 @@ def hex_to_base64(h):
     return base64
 
 if __name__ == '__main__':
-    import sys
     print hex_to_base64(sys.argv[1])
